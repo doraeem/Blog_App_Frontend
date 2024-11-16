@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import Editor from 'react-simple-wysiwyg';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const CreateBlog = () => {
    const [html, setHtml] = useState('');
+   const navigate = useNavigate();
 
    function onChange(e) {
     setHtml(e.target.value);
@@ -26,6 +29,9 @@ const CreateBlog = () => {
       },
       body : JSON.stringify(newData)
     });
+
+    toast("Blog added Successfully.");
+    navigate('/');
 
   }
 

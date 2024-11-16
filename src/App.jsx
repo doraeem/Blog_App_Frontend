@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes,Route } from 'react-router-dom';
 import Blogs from './components/Blogs';
 import CreateBlog from './components/CreateBlog';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
       <Route path='/' element={<Blogs/>}/>
       <Route path='/create' element={<CreateBlog/>}/>
     </Routes>
+    <ToastContainer />
      
     </>
   )
