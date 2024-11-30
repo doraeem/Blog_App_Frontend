@@ -25,7 +25,8 @@ const CreateBlog = () => {
     });
     const result = await res.json();
     // console.log(result);
-    if (result.status == false) {
+    //if not selected valid file of img
+    if (result.status == false) {     
       alert(result.errors.image);
       e.target.value = null;
   }   
@@ -83,7 +84,7 @@ const CreateBlog = () => {
         </div>
         <div className="mb-3">
             <label className='form-label'>Description</label>
-            <Editor value={html} containerProps={{ style: { height: '400px' } }}
+            <Editor value={html} containerProps={{ style: { height: '700px' } }}
             onChange={onChange} />
            
         </div>
