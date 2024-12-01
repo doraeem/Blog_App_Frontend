@@ -1,9 +1,10 @@
-import { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes,Route } from 'react-router-dom';
 import Blogs from './components/Blogs';
 import CreateBlog from './components/CreateBlog';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import BlogDetail from './components/BlogDetail';
 
