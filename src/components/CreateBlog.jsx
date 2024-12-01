@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import Editor from 'react-simple-wysiwyg';
 import { useForm } from 'react-hook-form';
