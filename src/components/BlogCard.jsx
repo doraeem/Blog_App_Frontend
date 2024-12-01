@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types';
+
 
 const BlogCard = ({blog}) => {
   const showImage = (img) =>{
@@ -25,5 +27,14 @@ const BlogCard = ({blog}) => {
   </div>
   )
 }
+BlogCard.propTypes = {
+  blog: PropTypes.shape({
+      image: PropTypes.string,
+      title: PropTypes.string.isRequired,
+      shortDesc: PropTypes.string.isRequired,
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  }).isRequired,
+};
+
 
 export default BlogCard
